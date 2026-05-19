@@ -1,0 +1,683 @@
+/* Variáveis de cores para facilitar */
+:root {
+  --bg-dark: #00050f;
+  --text-white: #ffffff;
+  --text-gray: #d1d5db;
+  --pill-bg: #f3f4f6;
+  --pill-active: #d1c4e9;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.secao1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.eclipse-maior {
+  position: absolute;
+  top: -29%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.eclipse-menor {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.eclipse-menor-inferior {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 3rem;
+  width: 200px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  background-color: var(--pill-bg);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: rgb(104, 104, 250);
+}
+
+.nav-link:hover {
+  background-color: #e0e0e0;
+}
+
+/* Botão Entre em Contato */
+.btn-contato {
+  text-decoration: none;
+  color: #000;
+  background-color: rgb(104, 104, 250);
+  padding: 6px 6px 6px 32px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-contato:hover {
+  transform: scale(1.05);
+  background-color: #ffff;
+  transition: all 0.2s ease;
+}
+
+.imagem-seta {
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin-top: -5vh;
+}
+
+.hero-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--text-gray);
+  margin-bottom: 4rem;
+}
+
+.orb-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+  top: -8px;
+}
+
+.orb-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.orb-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orb-text .nome {
+  font-size: 2.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.orb-text .sobrenome {
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #a3b8ff;
+  text-shadow: 0 0 15px rgba(163, 184, 255, 0.4);
+}
+
+.secao2 {
+  background-color: #fff;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.sobre-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15rem;
+}
+
+/* Lado Esquerdo - Card da Foto */
+.sobre-esquerda {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-perfil {
+  width: 100%;
+  max-width: 650px;
+  height: 600px;
+  border-radius: 32px;
+  object-fit: cover;
+}
+
+/* Lado Direito - Conteúdo */
+.sobre-direita {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sobre-tag {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #a3b8ff;
+  margin-bottom: 1rem;
+}
+
+.sobre-titulo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.sobre-texto {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.sobre-texto:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* Container de Tags/Skills */
+.sobre-skills {
+  display: flex;
+  width: 300px;
+  height: 300px;
+}
+
+.skill-tag {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: var(--pill-active);
+  color: #000;
+  border-color: var(--pill-active);
+}
+
+.secao3 {
+  background-color: var(--bg-dark);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+  box-sizing: border-box;
+}
+
+.trabalhos-titulo {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--text-white);
+  margin-bottom: 5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.trabalhos-grid {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.projeto-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 540px; /* Mantém a proporção vertical esticada do arquivo em anexo */
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(163, 184, 255, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 5, 15, 0.9);
+}
+
+.projeto-imagem {
+  flex: 1.1;
+  background-color: #121824; /* Base cinza escura para os placeholders de projetos */
+  overflow: hidden;
+}
+
+.projeto-imagem img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.projeto-card:hover .projeto-imagem img {
+  transform: scale(1.04);
+}
+
+.projeto-info {
+  flex: 0.9;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projeto-info h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+}
+
+.projeto-info p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.btn-projeto {
+  text-decoration: none;
+  color: #a3b8ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.btn-projeto span {
+  transition: transform 0.2s ease;
+}
+
+.btn-projeto:hover {
+  color: var(--pill-active);
+}
+
+.btn-projeto:hover span {
+  transform: translateX(4px);
+}
+
+.secao4 {
+  position: relative;
+  width: 100%;
+}
+
+/* Mecanismo Sticky para empilhar os cards um acima do outro ao rolar */
+.painel-etapa {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  box-sizing: border-box;
+  /* Sombra superior para dar profundidade física quando uma div cobrir a outra */
+  box-shadow: 0 -30px 50px rgba(0, 0, 0, 0);
+}
+
+.etapa-container {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 1.2fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Lado Esquerdo: Números com opacidade reativa */
+.etapa-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.num-lateral {
+  font-size: 5.5rem;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+}
+
+.num-lateral.active {
+  opacity: 1;
+  color: rgb(0, 0, 0.8);
+}
+
+.etapa-imagem-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.etapa-imagem-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Lado Direito: Textos e Botões */
+.etapa-direita {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.etapa-titulo {
+  font-size: 6.5rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0.8);
+  margin-bottom: 1.8rem;
+}
+
+.etapa-descricao {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgb(0, 0, 0.8);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.etapa-action-bar {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  .imagem-seta {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Botão Orçamento Pílula */
+.btn-orcamento {
+  text-decoration: none;
+  color: #000;
+  background-color: rgb(104, 104, 250);
+  padding: 6px 6px 6px 42px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn-orcamento:hover {
+  transform: scale(1.03);
+  background-color: rgb(104, 104, 250);
+}
+
+.seta-icone-dark {
+  width: 40px;
+  height: 40px;
+}
+
+/* Pequenas tags circulares de tecnologias mostradas na etapa 01 */
+.etapa-badges {
+  display: flex;
+  margin: 10px;
+}
+
+.badge-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.portfolio-footer {
+  position: relative;
+  background-color: var(--bg-dark);
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Eclipse invertido no fundo para criar profundidade no fim da página */
+.eclipse-footer {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+  max-width: 1440px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alinhamento do CTA Principal */
+.footer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20rem;
+}
+
+.footer-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #a3b8ff;
+  margin-bottom: 1.5rem;
+}
+
+.footer-headline {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text-white);
+  margin-bottom: 3.5rem;
+  letter-spacing: -1px;
+}
+
+/* Botão de contato robusto baseado no estilo da Hero */
+.btn-footer-contato {
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  padding: 0.6rem 0.6rem 0.6rem 2.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-footer-contato:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
+}
+
+/* Divisor elegante */
+.footer-divisor {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 3rem;
+}
+
+/* Barra inferior de créditos e navegação secundária */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-logo {
+  height: 24px;
+  align-self: flex-start;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-links {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer-link-item {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  letter-spacing: 1px;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-link-item:hover {
+  color: rgb(104, 104, 250);
+  transform: translateY(-2px);
+}

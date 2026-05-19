@@ -1,0 +1,290 @@
+@media (max-width: 1024px) {
+  .header {
+    padding: 2rem;
+  }
+  .nav-menu {
+    gap: 1rem;
+  }
+
+  .hero-content {
+    margin-top: -600px;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+    padding: 0 2rem;
+    margin-bottom: -150px;
+    
+  }
+
+  .secao1 .eclipse-maior {
+    top: -10px;
+    width: 190vw;
+    height: 75vw;
+  }
+
+  .eclipse-menor {
+    top: -10px;
+    width: 150vw;
+    height: 60vw;
+  }
+
+  .eclipse-menor-inferior {
+    top: 800px;
+    width: 150vw;
+    height: 60vw;
+  }
+
+  .orb-container {
+    top: 258px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .btn-contato {
+    padding: 3px 3px 3px 15px;
+  }
+
+  /* Sobre */
+  .sobre-container {
+    gap: 4rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-direita {
+    align-items: center;
+  }
+
+  .sobre-skills {
+    flex-direction: column;
+    width: 25%;
+    height: 25%;
+  }
+
+  .foto-perfil {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Trabalhos */
+  .secao3 {
+    height: auto;
+    min-height: 100vh;
+    padding: 6rem 2rem;
+  }
+  .trabalhos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Etapas */
+  .painel-etapa {
+    padding: 0 2rem;
+  }
+  .etapa-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .etapa-esquerda {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .etapa-direita {
+    align-items: center;
+  }
+  .etapa-titulo {
+    font-size: 4.5rem;
+  }
+
+  .etapa-imagem-wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  .portfolio-footer {
+    padding: 15rem 2rem;
+  }
+  .footer-headline {
+    font-size: 4.5rem;
+  }
+
+  .eclipse-footer {
+    width: 200vw;
+    height: 500vw;
+    top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajuste de Eclipses para não gerar scroll horizontal */
+ 
+  .logo{
+    width: 0px
+  }
+
+  .secao1 .eclipse-maior {
+    top: 0px;
+    height: 500px;
+  }
+
+  .eclipse-menor {
+    top: 0px;
+    height: 430px;
+    width: 200vw;
+  }
+
+  .eclipse-menor-inferior {
+    top: 600px;
+  }
+
+  /* Header - Reorganizando para mobile */
+  .header {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .btn-contato {
+    margin-top: 1rem;
+  }
+
+  /* Hero */
+  .hero-content {
+    margin-top: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .orb-container .orb-bg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .orb-container {
+    top: -80px;
+    width: 260px;
+    height: 260px;
+  }
+
+  /* Sobre */
+  .secao2 {
+    padding: 3rem 1.5rem;
+  }
+
+  .sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sobre-direita .sobre-titulo {
+    flex-direction: column;
+    max-width: 100vw;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .sobre-esquerda {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  .sobre-texto {
+    max-width: 90vw;
+  }
+
+  /* Trabalhos */
+  .secao3 {
+    padding: 4rem 1.5rem;
+  }
+  .trabalhos-titulo {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .trabalhos-grid {
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+    gap: 1.5rem;
+  }
+  .projeto-card {
+    height: auto;
+    min-height: 480px;
+  }
+
+  /* Etapas */
+  .painel-etapa {
+    position: relative; /* Remove o sticky em telas muito pequenas para evitar quebra de layout vertical */
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 1.5rem;
+  }
+  .etapa-imagem-wrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .num-lateral {
+    font-size: 3.5rem;
+  }
+  .etapa-titulo {
+    font-size: 3rem;
+  }
+  .etapa-action-bar {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Footer */
+  .footer-cta {
+    margin-bottom: 8rem;
+  }
+  .footer-headline {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  .btn-footer-contato {
+    font-size: 0.85rem;
+    gap: 1rem;
+    padding: 0.6rem 0.6rem 0.6rem 1.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .footer-brand {
+    align-items: center;
+  }
+  .footer-logo {
+    align-self: center;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1280px) {
+    .secao1 .eclipse-maior {
+        top: -405px;
+        width: 120vw;
+        height: 75vw
+}
+ 
+     .eclipse-menor{
+        top: -350px;
+        width: 110vw;
+        height: 60vw;
+     }
+
+}
